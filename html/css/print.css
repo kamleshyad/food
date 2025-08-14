@@ -1,0 +1,108 @@
+:root{
+    --color-darkblack : #000;
+    --color-black : #23262F;
+    --color-white : #fff;
+    --color-offwhite : #fcfcfd;
+    --color-onyx : #353945;
+    --color-green : #04B90B;
+    --color-lightgreen : #DDF3D8;
+    --color-grey : #777E90;
+
+    --secondary-font : 'Alice';
+
+    --heading-h1 : clamp(30px, 5.6vw, 72px);
+}
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+/* alice-regular - latin */
+
+@font-face {
+    font-family: 'Alice';
+    src: url('../fonts/alice/Alice-Regular.ttf') format('woff2'),
+         url('../fonts/alice/Alice-Regular.woff') format('woff'),
+         url('../fonts/alice/Alice-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins/Poppins-Bold.woff2') format('woff2'),
+         url('../fonts/poppins/Poppins-Bold.woff') format('woff'),
+         url('../fonts/poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins/Poppins-SemiBold.woff2') format('woff2'),
+         url('../fonts/poppins/Poppins-SemiBold.woff') format('woff'),
+         url('../fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins/Poppins-Medium.woff2') format('woff2'),
+         url('../fonts/poppins/Poppins-Medium.woff') format('woff'),
+         url('../fonts/poppins/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins/Poppins-Regular.woff2') format('woff2'),
+         url('../fonts/poppins/Poppins-Regular.woff') format('woff'),
+         url('../fonts/poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/*** GLOBAL SETTING ***/
+body {margin:0; padding:0;font:normal 18px 'Poppins', sans-serif; color: var(--color-black); line-height:normal;}
+
+/*Main Content*/
+.container{ width: min(1296px, 96%); margin:0 auto;}
+.xl-container{ width: min(1110px, 96%); margin:0 auto;}
+.unset{padding: 0; margin: 0; list-style: none;}
+a{text-decoration: none;}
+
+a.btn{font-size: 16px; font-weight: 500; line-height: 24px; padding: 10px 20px; border-radius: 8px; background: var(--color-green); color: var(--color-offwhite); text-transform: uppercase; transition: all 0.3s linear; display: inline-block;}
+a.btn:hover{background: var(--color-black);  color: var(--color-offwhite);}
+
+.headersec{padding-block: 33px;}
+.headersec .headerwrap{display: flex; flex-flow: row nowrap; gap: 30px; justify-content: space-between; align-items: center;}
+.headersec .headermenu ul{display: flex; flex-flow: row nowrap; gap: 32px; align-items: center; font-size: 0;}
+.headersec .headermenu ul li a{font-size: 16px; font-weight: 500; line-height: 24px; color: var(--color-grey); transition: all 0.3s linear; display: inline-block;}
+.headersec .headermenu ul li a:hover, .headersec .headermenu ul li a.active{color: var(--color-green);}
+.headersec .headermenu ul li a.btn{color: var(--color-offwhite);}
+
+.bannersec{padding-block: 105px 52px; position: relative; overflow: hidden; z-index: 1;}
+.bannersec::before{content:''; position: absolute; top: 155px; right: 50%; margin-right: -1435px; width: 1400px; aspect-ratio: 1; background: var(--color-lightgreen); border-radius: 50%; z-index: -1;}
+.bannersec .bannerbox{display: flex; flex-flow: row; gap: 25px; justify-content: space-between;}
+.bannersec .bannercaption{display: flex; flex-flow: column; gap: 40px; justify-content: space-between;}
+.bannersec .caption h1{font-size: var(--heading-h1); font-weight: 400; line-height: 74px; color: var(--color-black); font-family: var(--secondary-font); padding-block: 15px 0; letter-spacing: -0.5px;}
+.bannersec .caption p{font-size: 24px; font-weight: 400; line-height: 36px; color: var(--color-grey); margin-top: 15px;}
+.bannersec .caption p span{display: block;}
+.bannersec .caption .bannerbtn ul{margin-top: 35px; font-size: 0; display: flex; flex-flow: row nowrap; gap: 25px; align-items: center; }
+.bannersec .caption .bannerbtn ul li a{font-size: 16px; font-weight: 500; line-height: 24px; color: var(--color-offwhite); transition: all 0.3s linear;}
+.bannersec .caption .bannerbtn ul li:nth-child(2) a{color: var(--color-green);}
+.bannersec .caption .bannerbtn ul li:nth-child(2) a:hover{color: var(--color-black);}
+.bannersec .experiencesec{display: flex; flex-flow: row; gap: 25px; background: #F4F5F6; padding: 28px 56px; border-radius: 16px; width: min(576px, 100%); justify-content: space-between;}
+.bannersec .experiencesec p{font-size: 32px; font-weight: 600; line-height: 39px; color: var(--color-grey); text-align: center;}
+.bannersec .experiencesec p+p{padding-left: 60px; position: relative;}
+.bannersec .experiencesec p+p::before{content: ''; position: absolute; top: 50%; left: 0; transform: translate(0%, -50%); width: 1px; height: 68px; background: #E6E8EC;}
+.bannersec .experiencesec p span{display: block; font-weight: 400; font-size: 20px;}
+
+.bannersec .bannerimg{padding-bottom: 95px; position: relative;}
+.bannersec .bannerimg::before{content: ''; position: absolute; bottom: -52px; left: 30px; background: url(../images/chopstick-img.svg) no-repeat; background-size: cover; width: 300px; height: 250px; }
